@@ -1,0 +1,46 @@
+{
+	"configuration":{
+		"compress": true,
+		"customCompress": null,
+		"minifiy": true,
+		"customMinifiy": null,
+		"cache": false,
+		"cacheInterval": 24 //hours
+	},
+	"packages":[
+		{
+			"name": "bundleOneName",
+			"type": "js",
+			"files":{
+				"scriptOneName":"/absolute/file/path.js",
+				"scriptTwoName":"relative/file/path.js"
+			}
+		},
+		{
+			"name": "bundleTwoName",
+			"type": "css",
+			"files":{
+				"styleOneName":"/absolute/file/path.css",
+				"styleTwoName":"relative/file/path.css"
+			}
+		},
+		{
+			"name": "bundleThreeName",
+			"version": "1.1",
+			"type": "css",
+			"files":{
+				"styleOneName":"/absolute/file/path.css",
+				"styleTwoName":"relative/file/path.css"
+			}
+		},
+		{
+			"name": "bundleFourName",
+			"type": "css",
+			"include": ["bundleTwoName", "bundleThreeName@1.1"],
+			"files":{
+				"styleOneName":"/absolute/file/path.css",
+				"styleTwoName":"relative/file/path.css"
+			}
+		}
+	]
+}
